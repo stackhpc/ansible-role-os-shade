@@ -1,0 +1,12 @@
+---
+# Path to a directory in which to create a virtualenv.
+os_shade_venv:
+
+# Whether to install EPEL repository package.
+os_shade_install_epel: True
+
+# Whether to install package dependencies.
+os_shade_install_package_dependencies: True
+
+# Version of shade to install, or latest if empty.
+os_shade_version:
