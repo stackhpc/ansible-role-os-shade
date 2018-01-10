@@ -32,7 +32,8 @@
   become: True
   when:
     - os_shade_venv != None
-    - not os_shade_venv_stat.stat.exists
+    - not os_shade_venv_stat.stat.exists or
+      not os_shade_venv_stat.stat.writeable
 
 - name: Ensure the latest version of pip is installed
   pip:
