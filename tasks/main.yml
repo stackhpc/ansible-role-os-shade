@@ -27,8 +27,8 @@
   file:
     path: "{{ os_shade_venv | dirname }}"
     state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    owner: "{{ ansible_user_uid }}"
+    group: "{{ ansible_user_gid }}"
   become: True
   when:
     - os_shade_venv != None
