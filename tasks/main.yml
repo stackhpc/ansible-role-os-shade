@@ -19,10 +19,9 @@
 
 - name: Ensure required packages are installed
   package:
-    name: "{{ item }}"
+    name: "{{ os_shade_package_dependencies }}"
     state: present
   become: True
-  with_items: "{{ os_shade_package_dependencies }}"
   when: os_shade_install_package_dependencies | bool
 
 - name: Check whether the virtualenv directory exists
