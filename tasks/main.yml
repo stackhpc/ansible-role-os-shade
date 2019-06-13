@@ -57,7 +57,7 @@
   pip:
     name: "{{ item.name }}"
     version: "{{ item.version or omit }}"
-    state: present
+    state: "{{ os_shade_state }}"
     virtualenv: "{{ os_shade_venv or omit }}"
   with_items:
     - name: shade
