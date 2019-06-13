@@ -13,3 +13,6 @@ os_shade_state: present
 
 # Version of shade to install, or unrestricted if empty.
 os_shade_version:
+
+# Upper constraints file for installation of shade.
+os_shade_upper_constraints_file:

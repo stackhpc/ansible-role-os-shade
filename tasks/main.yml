@@ -59,6 +59,7 @@
     version: "{{ item.version or omit }}"
     state: "{{ os_shade_state }}"
     virtualenv: "{{ os_shade_venv or omit }}"
+    extra_args: "{% if os_shade_upper_constraints_file %}-c {{ os_shade_upper_constraints_file }}{% endif %}"
   with_items:
     - name: shade
       version: "{{ os_shade_version }}"
