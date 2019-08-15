@@ -8,5 +8,11 @@ os_shade_install_epel: True
 # Whether to install package dependencies.
 os_shade_install_package_dependencies: True
 
-# Version of shade to install, or latest if empty.
+# State of the shade package.
+os_shade_state: present
+
+# Version of shade to install, or unrestricted if empty.
 os_shade_version:
+
+# Upper constraints file for installation of shade.
+os_shade_upper_constraints_file:
