@@ -11,7 +11,7 @@
 - name: Ensure EPEL repo is installed
   yum:
     name: epel-release
-    state: installed
+    state: present
   become: True
   when:
     - os_shade_install_epel | bool
